@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+#visitor-count-collection {
+    text-align: left;
+    color: rgb(168, 42, 4);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact {
+    font-size: 14px;
+    color: #555;
+}
+
+.contact a {
+    color: #0073b1;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+    border-bottom: 2px solid #0073b1;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Visitor Counter Styling */
+.visitor-counter {
+    font-size: 24px;            /* Larger font size */
+    color: #0073b1;             /* Azure-like blue color */
+    background-color: #e0f7fa;  /* Light blue background */
+    padding: 10px;              /* Padding around text */
+    border-radius: 10px;        /* Rounded corners */
+    text-align: center;         /* Center align the text */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+    font-weight: bold;          /* Make the text bold */
+    margin-top: 20px;           /* Space above the counter */
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two equal columns */
+    gap: 10px;
+    list-style-type: disc;
+    color: black; /* Black text for skills */
+}
+ 
+.skills-list li {
+    list-style-type: disc;
+    color: black;
+    margin-left: 20px;
+}
+
+.skills-list li::marker {
+    color: #0073b1; /* Blue bullet points */
+}
+
+.languages ul li::marker{
+    color: #0073b1; /* Blue bullet points */
+}
+.languages ul li {
+    list-style-type: disc; /* Ensure bullet points are displayed */
+}
+.languages ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two equal columns */
+    gap: 10px;
+    padding-left: 20px; /* Padding for languages list */
+}
+
+p {
+    margin-bottom: 10px;
+}
+.education p{
+    padding-left: 20px; /* Padding for languages list */
+    /* color: rgb(255, 55, 0); */
+}
+
+.experience ul{
+    padding-left: 20px; /* Padding for languages list */
+}
+.experience ul li::marker{
+    color: #0073b1;
+}
+
+.summary p{
+    padding-left: 20px;
+    text-align:left;
+    text-decoration: wavy;
+}

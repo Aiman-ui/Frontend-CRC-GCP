@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aiman Zafar - CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div id="visitor-count-collection">Loading visitor count...</div>
+            <h1>AIMAN ZAFAR</h1>
+            <div class="contact">
+                <a href="https://www.linkedin.com/in/aiman-zafar44" target="_blank">www.linkedin.com/in/aiman-zafar44</a><br>
+                <p>aimangull472@gmail.com<br>Gujrat, Pakistan</p>
+            </div>
+        </header>
+        
+
+        <section class="summary">
+            <h2>SUMMARY</h2>
+            <p>Currently focused on mastering DevOps practices, with a growing interest in DevSecOps. Alongside my
+                technical expertise, I bring strong leadership, problem-solving, and project management skills. I’m
+                committed to continuous learning, particularly in DevOps, and have started exploring foundational
+                security practices to ensure secure and scalable solutions. I enjoy working collaboratively and taking
+                on challenging roles that push me to grow both technically and personally.</p>
+        </section>
+
+        <section class="experience">
+            <h2>EXPERIENCE</h2>
+            <h3>Associate DevOps Engineer</h3>
+            <p><strong>Opsoura | Gujrat</strong><br>June 2024 - Present</p>
+            <ul>
+                <li>Implementing CI/CD pipelines using GitHub Actions and GitLab for automated deployments while
+                    ensuring system reliability.</li>
+                <li>Configured high availability for Kubernetes clusters across multiple nodes and deployed Harbor for
+                    container image management.</li>
+                <li>Managed frontend and backend services on Azure, utilizing Function APIs, Cosmos DB, and Azure App
+                    Services for scalable, serverless solutions.</li>
+                <li>Leveraged GCP cloud functions and backend tools for efficient cloud resource management.</li>
+                <li> Set up Prometheus for system monitoring and alerting, improving visibility into application
+                    performance. </li>
+                <li>Managed multiple VMs for DevOps learning and experimentation. Set up remote connections and
+                    configured secure file transfers between different virtual environments.</li>
+            </ul>
+        </section>
+
+        <section class="skills">
+            <h2>SKILLS</h2>
+            <ul class="skills-list">
+                <li>CI/CD (GitHub Actions)</li>
+                <li>Proficiency in Bash, HTML, CSS, C/C++</li>
+                <li>Kubernetes, Docker (Container Orchestration)</li>
+                <li>Linux (RHEL, Ubuntu, CentOS), Windows</li>
+                <li>Server Configuration</li>
+                <li>Azure,GCP, AWS</li>
+                <li>MS Office Expert</li>
+            </ul>
+        </section>
+
+        <section class="education">
+            <h2>EDUCATION</h2>
+            <p><strong>Associate Degree in Computer Science</strong><br>University of Gujrat, 2022-2024</p>
+        </section>
+
+        <section class="languages">
+            <h2>LANGUAGES</h2>
+            <ul>
+                <li>Urdu (Native)</li>
+                <li>English (Intermediate)</li>
+            </ul>
+        </section>
+        <script>
+            async function updateVisitorCount() {
+                const apiUrl = "https://us-east1-cloud-resume-project-439503.cloudfunctions.net/VisitorCountFunc"; // Cloud Function URL
+
+                try {
+                    // Fetch the current count from the API (GET request)
+                    const response = await fetch(apiUrl, { method: "GET" });
+                    const data = await response.json();
+                    document.getElementById("visitor-count-collection").innerText = `Visitors: ${data.count}`;
+
+                    // Increment the count (POST request)
+                    await fetch(apiUrl, { method: "POST" });
+                } catch (error) {
+                    console.error("Error updating visitor count:", error);
+                    document.getElementById("visitor-count-collection").innerText = "Error loading visitor count";
+                }
+            }
+
+            // Call the function to update the count on page load
+            document.addEventListener("DOMContentLoaded", updateVisitorCount);
+        </script>   
+
+</body>
+
+</html>
