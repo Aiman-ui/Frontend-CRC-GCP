@@ -2,7 +2,7 @@ steps:
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: 'sh'
   args:
-  - '-c'
+  - '-c'  
   - |
     echo "Uploading updated files to Cloud Storage without deleting existing files..."
     gsutil -m rsync -r . gs://aiman-devops.site
