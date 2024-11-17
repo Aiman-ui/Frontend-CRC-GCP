@@ -7,7 +7,7 @@ steps:
     echo "Uploading updated files to Cloud Storage without deleting existing files..."
     gsutil -m rsync -r . gs://aiman-devops.site
     echo "Invalidating Cloud CDN cache..."
-    gcloud compute url-maps invalidate-cdn-cache lb-crc --path "/*"
+    gcloud compute url-maps invalidate-cdn-cache  crc-lb --path "/*"
 
 options:
   logging: CLOUD_LOGGING_ONLY
